@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Plan your next Toronto or GTA move. Compare selling first and buying first, estimate your costs and create a printable closing plan.">
+<meta name="theme-color" content="#12392e">
+<title>Toronto &amp; GTA MOVE Guide | Tsering Chogyal</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="content.js"></script>
+<script defer src="finance.js"></script>
+<script defer src="guide.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to guide</a>
+<header class="mast">
+  <div class="wrap mast-inner">
+    <a class="brand" href="#main"><img src="assets/tc-logo.png" alt="" width="60" height="44" fetchpriority="high"><span><strong>Tsering Chogyal</strong><small>Toronto &amp; GTA real estate</small></span></a>
+    <nav aria-label="Guide"><a href="#journey">Strategy</a><a href="#calculator">Calculator</a><a href="#scenarios">Scenarios</a><a href="#plan">My plan</a></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+  <section class="hero" aria-labelledby="title">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="kicker">Toronto &amp; GTA homeowner guide</p>
+        <h1 id="title">The MOVE Guide</h1>
+        <p class="intro">Two homes. Two closings. One plan for what needs to happen first.</p>
+        <p class="hero-copy">Choose your starting point, run the numbers and build a plan you can take to your lender and lawyer.</p>
+      </div>
+      <div class="route" aria-hidden="true"><span>Your current home</span><i></i><span>Your next home</span></div>
+    </div>
+  </section>
+  <section class="wrap section journey" id="journey" aria-labelledby="journey-title">
+    <h2 id="journey-title">What comes first?</h2>
+    <fieldset class="choice">
+      <legend class="sr">Choose your moving strategy</legend>
+      <label><input form="planner" type="radio" name="strategy" value="sell" checked><span><strong>Sell first</strong><small>Know your proceeds before you commit to buying.</small></span></label>
+      <label><input form="planner" type="radio" name="strategy" value="buy"><span><strong>Buy first</strong><small>Secure your next home and plan for the overlap.</small></span></label>
+    </fieldset>
+    <div class="journey-text" id="journey-text">
+      <p>If you need your sale proceeds for the purchase, Tsering generally recommends selling first. Base your next purchase on a conservative selling price.</p>
+      <ol><li>Get payout quotes and price your home conservatively.</li><li>Negotiate enough time to find and close on your next home.</li><li>Line up temporary housing and storage in case dates don’t match.</li></ol>
+    </div>
+    <a class="button" href="#calculator">Run my numbers</a>
+  </section>
+  <section class="band" id="calculator" aria-labelledby="calc-title"><div class="wrap section">
+    <h2 id="calc-title">Know your numbers</h2>
+    <p>Start with the illustrative figures below. Replace them with your own. All amounts are in Canadian dollars.</p>
+    <noscript><p>The calculator and personalized plan require JavaScript. You can still read the strategies and contact Tsering directly.</p></noscript>
+    <form id="planner" novalidate autocomplete="off">
+      <div class="inputs">
+        <fieldset class="sheet"><legend>Current home</legend>
+          <div class="fields" id="sale-fields"></div>
+          <details><summary>Selling costs and payouts</summary><div class="fields" id="sale-extra"></div></details>
+        </fieldset>
+        <fieldset class="sheet"><legend>Next home</legend>
+          <div class="fields" id="buy-fields"></div>
+          <details><summary>Taxes, financing and adjustments</summary>
+            <p>Enter rebates only for the ownership share your lawyer confirms can receive a credit at closing. Repeat homeowners generally do not qualify. For a rebate received later, leave the share at zero.</p>
+            <div class="fields" id="buy-extra"></div>
+          </details>
+        </fieldset>
+        <fieldset class="sheet wide"><legend>Closing timeline and financing</legend>
+          <div class="fields dates" id="date-fields"></div>
+          <p id="timeline-live" class="notice" aria-live="polite"></p>
+          <details><summary>Bridge financing and property risks</summary><div class="fields dates" id="risk-fields"></div></details>
+        </fieldset>
+      </div>
+      <p class="error" id="errors" role="alert" hidden></p>
+      <p id="updated" class="sr" role="status"></p>
+      <div class="actions"><button type="button" id="update" disabled>Update my plan</button><a href="#plan">View my plan</a></div>
+    </form>
+    <details class="sources"><summary>Tax sources and estimate assumptions</summary>
+      <p>The model is for typical resale homes, using standard Ontario and City of Toronto rates reviewed November 2026. New-build HST, foreign-buyer taxes and special exemptions require a separate quote. Enter any applicable additional amount under other purchase costs. Toronto tax applies inside the City of Toronto, including its former municipalities.</p>
+      <p>Commission HST is calculated separately. Include applicable tax in your other cost estimates and use a signed amount for closing adjustments. The mortgage payment uses a Canadian fixed-rate convention with semiannual compounding. The insured estimate uses a standard 25-year-or-shorter owner-occupied premium and capitalizes it, with Ontario tax due separately.</p>
+      <p>Deposit funds are a subset of your liquid cash. Enter cash before any deposit already paid, or add the paid amount back to today’s balance. Include only funds reliably available when needed. Bridge interest is a simple daily estimate. The model treats bridge interest and fees as payable after the sale and excludes temporary housing unless you enter it under other purchase costs. Confirm terms, qualification and statement amounts with your lender and lawyer.</p>
+      <ul>
+        <li><a href="https://www.ontario.ca/document/land-transfer-tax/calculating-land-transfer-tax">Ontario land transfer tax</a> and <a href="https://www.ontario.ca/document/land-transfer-tax/land-transfer-tax-refunds-first-time-homebuyers">first-time buyer refund</a></li>
+        <li><a href="https://www.toronto.ca/services-payments/property-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rates-and-fees/">Toronto land transfer tax</a> and <a href="https://www.toronto.ca/services-payments/property%20-taxes-utilities/municipal-land-transfer-tax-mltt/municipal-land-transfer-tax-mltt-rebate-opportunities/">first-time buyer rebate</a></li>
+        <li><a href="https://www.canada.ca/en/financial-consumer-agency/services/mortgages/down-payment.html">Federal minimum down payment</a>, <a href="https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/premium-information-for-homeowner-and-small-rental-loans">CMHC premiums</a> and <a href="https://www.ontario.ca/document/retail-sales-tax/insurance-and-benefits-plans">Ontario insurance tax</a></li>
+      </ul>
+    </details>
+  </div></section>
+  <section class="wrap section" id="scenarios" aria-labelledby="scenario-title">
+    <h2 id="scenario-title">Eight moves to think through</h2>
+    <p>Explore the decisions that can change your budget or move-in date.</p>
+    <div class="scenario-list" id="scenario-list"></div>
+    <details class="sources"><summary>Questions to ask your lender and lawyer</summary>
+      <dl>
+        <dt>Mortgage payout and portability</dt><dd>Ask for a dated payout statement and a written comparison of breaking or porting the mortgage, including any penalty, discharge fee and portability window.</dd>
+        <dt>Qualification, deposit and HELOC</dt><dd>Confirm approval for the specific property and appraisal. Ask which funds are acceptable for the deposit and how any HELOC draw affects qualification and payout.</dd>
+        <dt>Bridge financing</dt><dd>Ask whether you need a firm sale, how much is available, when funds can advance and what happens if the sale is delayed.</dd>
+        <dt>Freehold and condo</dt><dd>Budget for a freehold inspection and near-term repairs. For a condo, have your lawyer review the status certificate, reserve fund, fees, assessments and moving rules.</dd>
+      </dl>
+    </details>
+  </section>
+  <section class="band plan-band" id="plan" aria-labelledby="plan-title"><div class="wrap section">
+    <div class="print-only"><strong>Toronto &amp; GTA MOVE Guide</strong></div>
+    <div class="section-head"><h2 id="plan-title" tabindex="-1">Your MOVE plan</h2><button type="button" id="print" disabled>Print / Save as PDF</button></div>
+    <div id="plan-results"></div>
+    <h3>Personalized checklist</h3>
+    <p id="progress" class="screen-only"></p>
+    <ul class="checklist" id="checklist"></ul>
+    <p class="fine">Planning estimates only. Confirm financing with your lender and closing funds, timing and obligations with your lawyer.</p>
+    <div class="print-only print-brand">
+      <img src="assets/tc-logo.png" alt="" width="60" height="44">
+      <strong>Tsering Chogyal</strong><br>Century 21 People’s Choice Realty Inc.<br>416-451-4099 · tsechogyal@gmail.com
+      <img src="assets/century21.png" alt="Century 21" width="100" height="45">
+    </div>
+  </div></section>
+  <section class="wrap section eval" id="evaluation" aria-labelledby="eval-title">
+    <div><h2 id="eval-title">What could your home sell for?</h2><p>Ask Tsering for a preliminary selling-price range based on your property and recent neighbourhood sales.</p>
+      <div class="agent"><img src="assets/headshot.jpg" loading="lazy" alt="Tsering Chogyal" width="74" height="74"><div><strong>Tsering Chogyal</strong><p>Century 21 People’s Choice Realty Inc.</p><a href="tel:+14164514099">416-451-4099</a> · <a href="mailto:tsechogyal@gmail.com">Email Tsering</a></div></div>
+    </div>
+    <details class="sheet"><summary>Prepare a home evaluation request</summary>
+      <form id="evaluation-form" data-endpoint="">
+        <div class="fields dates">
+          <label>Name<input name="name" autocomplete="name" required maxlength="100"></label>
+          <label>Email<input name="email" type="email" spellcheck="false" autocomplete="email" required maxlength="160"></label>
+          <label>Property address<input name="address" autocomplete="street-address" required maxlength="200"></label>
+          <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel" maxlength="30"></label>
+          <label>Property type<select name="type"><option>Detached</option><option>Semi-detached</option><option>Townhouse</option><option>Condo</option><option>Other</option></select></label>
+          <label>Approximate size<input name="size" maxlength="60" placeholder="e.g. 1,500 sq. ft.…"></label>
+          <label>Condition<input name="condition" maxlength="100"></label>
+          <label>Selling timeline<input name="timing" maxlength="100"></label>
+        </div>
+        <label>Property notes (optional)<textarea name="notes" rows="3" maxlength="500"></textarea></label>
+        <p class="fine" id="privacy">Tsering will use the details you choose to email to respond to your evaluation request. Your calculator and checklist stay on this page in your browser. This request does not subscribe you to marketing.</p>
+        <button type="submit" aria-describedby="privacy" disabled>Open email draft</button>
+        <p class="fine" id="draft-status" role="status"></p>
+      </form>
+    </details>
+  </section>
+</main>
+<footer class="mast"><div class="wrap mast-inner"><span>Toronto &amp; GTA MOVE Guide</span><div class="broker"><img src="assets/century21.png" alt="" width="105" height="48"><span>Century 21 People’s Choice Realty Inc.</span></div></div></footer>
+</body>
+</html>
